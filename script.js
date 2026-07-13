@@ -1,18 +1,31 @@
- // ─── TAB SWITCH ───
+/* ── Theme toggle (light default, dark optional) ── */
+(function () {
+  const root = document.documentElement;
+  const toggle = document.getElementById('themeToggle');
+  const saved = localStorage.getItem('drcc-theme');
+  if (saved === 'dark') root.setAttribute('data-theme', 'dark');
+
+  toggle && toggle.addEventListener('click', function () {
+    const isDark = root.getAttribute('data-theme') === 'dark';
+    if (isDark) {
+      root.removeAttribute('data-theme');
+      localStorage.setItem('drcc-theme', 'light');
+    } else {
+      root.setAttribute('data-theme', 'dark');
+      localStorage.setItem('drcc-theme', 'dark');
+    }
+  });
+})();
+
+/* ── Treatments tabs ── */
 function switchTab(name, btn) {
-  document.querySelectorAll('.treat-panel').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.ttab').forEach(t => t.classList.remove('active'));
-  document.getElementById('tp-' + name).classList.add('active');
+  document.querySelectorAll('.ttab').forEach(function (t) { t.classList.remove('active'); });
   btn.classList.add('active');
+  document.querySelectorAll('.treat-panel').forEach(function (p) { p.classList.remove('active'); });
+  const panel = document.getElementById('tp-' + name);
+  if (panel) panel.classList.add('active');
 }
 
-// ─── SCROLL REVEAL ───
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('vis'); });
-}, { threshold: 0.1 });
-document.querySelectorAll('.rv').forEach(el => obs.observe(el));
-
-// ─── CHATBOT ───
 let chatIsOpen = false;
 
 function toggleChat() {
