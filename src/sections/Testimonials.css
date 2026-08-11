@@ -1,0 +1,96 @@
+.testi__feature {
+  min-height: 280px;
+  display: grid;
+  align-content: space-between;
+  gap: 1.25rem;
+}
+
+.testi__quote-mark {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  line-height: 0.8;
+  color: var(--accent-soft);
+  opacity: 0.45;
+  display: block;
+}
+
+.testi__feature p {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2.4vw, 1.75rem);
+  line-height: 1.35;
+  color: var(--ink);
+  margin: 0.5rem 0 1rem;
+}
+
+.testi__feature footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  align-items: baseline;
+}
+
+.testi__feature footer strong {
+  font-size: 0.95rem;
+}
+
+.testi__feature footer span {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.testi__dots {
+  display: flex;
+  gap: 0.45rem;
+}
+
+.testi__dots button {
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(42, 42, 40, 0.15);
+  cursor: pointer;
+  padding: 0;
+  transition: width 0.25s, background 0.25s;
+}
+
+.testi__dots button.is-active {
+  background: var(--accent);
+  width: 22px;
+}
+
+.testi__side {
+  display: grid;
+  gap: 0.85rem;
+  align-content: start;
+}
+
+.testi__mini-wrap {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.testi__mini {
+  width: 100%;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.testi__mini p {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+.testi__mini strong {
+  font-size: 0.88rem;
+}
+
+.testi__mini span {
+  font-size: 0.75rem;
+  color: var(--muted);
+}

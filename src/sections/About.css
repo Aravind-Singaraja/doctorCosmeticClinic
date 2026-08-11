@@ -1,0 +1,114 @@
+.about__story {
+  display: grid;
+  gap: 1.25rem;
+  margin-bottom: 0.85rem;
+}
+
+.about__sticky {
+  position: relative;
+}
+
+.about__visual {
+  padding: 1.25rem;
+  min-height: 260px;
+  display: grid;
+  align-content: space-between;
+  gap: 1rem;
+}
+
+.about__hall {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  gap: 0.65rem;
+  min-height: 180px;
+}
+
+.about__room {
+  border-radius: 18px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.7), rgba(230, 229, 226, 0.45)),
+    repeating-linear-gradient(90deg, transparent, transparent 18px, rgba(42, 42, 40, 0.03) 18px, rgba(42, 42, 40, 0.03) 19px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0 0 0 1px rgba(42, 42, 40, 0.04);
+}
+
+.about__room--mid {
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.85), rgba(214, 220, 218, 0.5)),
+    radial-gradient(circle at 50% 70%, rgba(61, 79, 74, 0.08), transparent 55%);
+}
+
+.about__caption {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.about__chapters {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.about__chapter {
+  padding: clamp(1.25rem, 2.5vw, 1.75rem);
+  border-radius: var(--radius);
+}
+
+.about__num {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--accent-soft);
+  margin-bottom: 0.55rem;
+}
+
+.about__chapter h3 {
+  font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+  margin-bottom: 0.55rem;
+}
+
+.about__chapter p {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  max-width: 48ch;
+}
+
+.about__bento {
+  margin-top: 0.85rem;
+}
+
+.about__fact h3 {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  margin-bottom: 0.4rem;
+}
+
+.about__fact p {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+@media (min-width: 900px) {
+  .about__story {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 1rem;
+  }
+  .about__sticky {
+    position: sticky;
+    top: calc(var(--nav-h) + 1.25rem);
+  }
+  .about__visual {
+    min-height: 420px;
+  }
+  .about__hall {
+    min-height: 300px;
+  }
+  .about__chapters {
+    padding-block: 2rem;
+  }
+  .about__chapter {
+    min-height: 220px;
+    display: grid;
+    align-content: center;
+  }
+}
