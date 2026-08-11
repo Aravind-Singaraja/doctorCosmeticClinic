@@ -19,6 +19,9 @@
   height: 56px;
   width: auto;
   margin-bottom: 0.85rem;
+  padding: 0.45rem 0.65rem;
+  border-radius: 14px;
+  background: #0c0c0c;
 }
 
 .footer__brand p {
