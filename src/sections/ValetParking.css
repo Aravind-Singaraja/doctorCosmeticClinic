@@ -1,0 +1,55 @@
+.valet__visual {
+  min-height: 100%;
+  display: grid;
+  gap: 1rem;
+  align-content: center;
+  justify-items: start;
+}
+
+.valet__car {
+  width: min(100%, 220px);
+  color: var(--accent);
+}
+
+.valet__badge {
+  display: inline-flex;
+  flex-direction: column;
+  padding: 0.65rem 0.9rem;
+  border-radius: 14px;
+  background: rgba(61, 79, 74, 0.08);
+  border: 1px solid rgba(61, 79, 74, 0.12);
+}
+
+.valet__badge strong {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.valet__badge span {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.valet__visual > p,
+.valet__feat p,
+.valet__cta p {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+.valet__feat h3,
+.valet__cta h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.4rem;
+}
+
+.valet__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 0.85rem;
+}

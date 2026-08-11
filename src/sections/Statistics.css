@@ -1,0 +1,24 @@
+.stat-card {
+  text-align: center;
+  min-height: 160px;
+  display: grid;
+  place-content: center;
+  gap: 0.35rem;
+}
+
+.stat-card__value {
+  font-size: clamp(2.4rem, 5vw, 3.4rem);
+  line-height: 1;
+  color: var(--ink);
+}
+
+.stat-card__value span {
+  font-size: 0.55em;
+  color: var(--accent-soft);
+}
+
+.stat-card p {
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-weight: 500;
+}

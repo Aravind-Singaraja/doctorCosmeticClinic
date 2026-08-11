@@ -1,0 +1,45 @@
+.fab-stack {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 900;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.fab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.7rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-md);
+  color: var(--ink);
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.fab:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.fab--wa {
+  background: var(--accent);
+  color: #f7f6f4;
+  border-color: transparent;
+}
+
+.fab span {
+  display: none;
+}
+
+@media (min-width: 720px) {
+  .fab span {
+    display: inline;
+  }
+}

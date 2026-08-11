@@ -1,0 +1,122 @@
+.ba-card {
+  display: grid;
+  gap: 1rem;
+}
+
+.ba-card__stage {
+  position: relative;
+  height: 240px;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  user-select: none;
+  touch-action: none;
+}
+
+.ba-card__before,
+.ba-card__after {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+}
+
+.ba-card__before {
+  background:
+    linear-gradient(145deg, #d8d6d2, #c5c3be),
+    repeating-linear-gradient(45deg, transparent, transparent 12px, rgba(42, 42, 40, 0.03) 12px, rgba(42, 42, 40, 0.03) 13px);
+}
+
+.ba-card__after {
+  background:
+    linear-gradient(145deg, #f4f6f5, #d5e0dc),
+    radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.7), transparent 55%);
+  border-right: 2px solid rgba(255, 255, 255, 0.9);
+  overflow: hidden;
+}
+
+.ba-card__before span,
+.ba-card__after span {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(42, 42, 40, 0.55);
+  background: rgba(255, 255, 255, 0.55);
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+}
+
+.ba-card__range {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: ew-resize;
+  z-index: 3;
+}
+
+.ba-card__handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.95);
+  transform: translateX(-50%);
+  z-index: 2;
+  pointer-events: none;
+  box-shadow: 0 0 0 1px rgba(42, 42, 40, 0.08);
+}
+
+.ba-card__handle::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(61, 79, 74, 0.25);
+  box-shadow: var(--shadow-sm);
+}
+
+.ba-card__meta {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.ba-card__cat {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-soft);
+}
+
+.ba-card__meta h3 {
+  font-size: 1.35rem;
+}
+
+.ba-card__meta p {
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+}
+
+.ba-card__case {
+  font-size: 0.72rem;
+  color: var(--muted);
+  margin-top: 0.25rem;
+}
+
+@media (min-width: 720px) {
+  .ba-card {
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+  }
+  .ba-card__stage {
+    height: 260px;
+  }
+}

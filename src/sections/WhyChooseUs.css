@@ -1,0 +1,22 @@
+.why-card {
+  min-height: 100%;
+  display: grid;
+  gap: 0.55rem;
+  align-content: start;
+}
+
+.why-card__n {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+
+.why-card h3 {
+  font-size: 1.35rem;
+}
+
+.why-card p {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
